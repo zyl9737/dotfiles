@@ -10,7 +10,7 @@ Reference:   [Oh-My-Tmux](https://github.com/gpakosz/.tmux)
 
 ### Installation
 
-Requirements: 
+Requirements:
 
 * tmux **`>= 2.6`** running inside Linux, Mac, OpenBSD, Cygwin or WSL
 * awk, perl (with Time::HiRes support) and sed
@@ -45,7 +45,7 @@ tmux_conf_theme_pane_border="$tmux_conf_theme_colour_3" # Make the boundary line
 
 Requirements:
 
-- AutoHotKey `=1.1` on windows, you can download [here](https://autohotkey.com/download/1.1/).
+- AutoHotKey `=1.1` on windows, you can download [here](https://autohotkey.com/download/1.1/).   
 
 ## 3. VSCode(enhanced by VSCodeVim)
 
@@ -59,10 +59,8 @@ Requirements:
 
 Requirements:
 
-- Code Ace Jumper
-
-With this plugin, I can quickly locate words by pressing `Ctrl+;`.
-
+- Code Ace Jumper. With this plugin, I can quickly locate words by pressing `Ctrl+;`.
+- Projects Manager. With this plugin, I can show my projects list by `alt + shift + p`
 
 ## 4. NeoVim
 

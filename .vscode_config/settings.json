@@ -196,11 +196,20 @@
         "editor.semanticHighlighting.enabled": true
     },
     "settingsSync.ignoredSettings": [
-        "terminal.integrated.fontFamily",
+        "terminal.integrated.fontFamily"
     ],
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
-    "workbench.sideBar.location": "right",
-    "workbench.layoutControl.enabled": false,
     "window.menuBarVisibility": "compact",
-    "workbench.activityBar.location": "hidden",
+    "projectManager.git.baseFolders": [
+        "D:\\MyGitDemo"
+    ],
+    "remote.extensionKind": { 
+        "alefragnani.project-manager": [
+            "workspace"
+        ]
+    },
+    "workbench.sideBar.location": "right",
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true
+    
  }
