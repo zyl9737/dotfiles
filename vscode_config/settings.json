@@ -72,7 +72,7 @@
     "github.copilot.enable": {
         "*": true,
         "plaintext": false,
-        "markdown": false,
+        "markdown": true,
         "scminput": false,
         "python": true,
         "cpp": false
@@ -80,7 +80,6 @@
     "python.languageServer": "Pylance",
     "python.terminal.executeInFileDir": true,
     "editor.accessibilitySupport": "off",
-    "editor.minimap.enabled": false,
     "settingsSync.ignoredExtensions": [
         "ms-vscode-remote.remote-containers",
         "bazelbuild.vscode-bazel",
@@ -96,7 +95,9 @@
         "ms-vscode.js-debug-companion",
         "ms-vscode.cpptools",
         "ms-vscode.cpptools-extension-pack",
-        "ms-vscode.cpptools-themes"
+        "ms-vscode.cpptools-themes",
+        "leetcode.vscode-leetcode",
+        "rust-lang.rust-analyzer"
     ],
     "peacock.favoriteColors": [
         {
@@ -196,7 +197,7 @@
         "editor.semanticHighlighting.enabled": true
     },
     "settingsSync.ignoredSettings": [
-        "terminal.integrated.fontFamily"
+        "terminal.integrated.fontFamily",
     ],
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
     "window.menuBarVisibility": "compact",
@@ -208,8 +209,17 @@
             "workspace"
         ]
     },
-    "workbench.sideBar.location": "right",
-    "vim.useSystemClipboard": true,
-    "vim.hlsearch": true
-    
+    "vim.hlsearch": true,
+    "git.confirmSync": false,
+    "background.fullscreen": {
+        "images": ["file:///G:/BaiduSyncdisk/BaiduNotes/imgs/idebackgroud.png"], // 图片的url
+        "opacity": 0.91, // 建议值 0.85 ~ 0.95
+        "size": "cover", // css, 建议使用 `cover`自适应，或者 `contain`、`200px 200px`
+        "position": "center", // 同 `background-position`, 默认 `center`
+        "interval": 0 // 单位 `秒`，轮播时候图片切换间隔，默认 `0` 表示不开启
+    },
+    "cmake.showOptionsMovedNotification": false,
+    "editor.minimap.autohide": true,
+    "editor.fontFamily": "Fira Code,Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true  
  }

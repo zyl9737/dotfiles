@@ -45,7 +45,7 @@ tmux_conf_theme_pane_border="$tmux_conf_theme_colour_3" # Make the boundary line
 
 Requirements:
 
-- AutoHotKey `=1.1` on windows, you can download [here](https://autohotkey.com/download/1.1/).   
+- AutoHotKey `=1.1` on windows, you can download [here](https://autohotkey.com/download/1.1/).
 
 ## 3. VSCode(enhanced by VSCodeVim)
 
@@ -67,3 +67,14 @@ Requirements:
 I use this [Integration package](https://github.com/archibate/vimrc) for better C++ programing.
 
 there are still much to be improved.
+
+## 5. IDEA Vim
+
+Requirements:
+
+* IdeaVim
+* IdeaVim-EasyMotion
+* IdeaVimExtension
+* which-key  (Shortcut tips)
+* CodeGlance Pro  (like Code Ace Jumper in VSCode）
+* Translation

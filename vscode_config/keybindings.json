@@ -104,9 +104,9 @@
   },
   {
     
-    "key": "space r",
+    "key": "space space",
     "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "editorTextFocus && vim.mode == 'Normal' || !inputFocus && vim.mode == 'Normal'"
   },
   {
     "key": "space g d",
@@ -219,6 +219,18 @@
     "key": "ctrl+alt+\\",
     "command": "workbench.action.toggleAuxiliaryBar"
   },
+
+// Alt+`切换窗口
+  {
+    "key": "alt+oem_3",
+    "command": "workbench.action.switchWindow"
+  },
+  {
+    "key": "ctrl+alt+b",
+    "command": "-cph.runTestCases"
+  },
+
+  // 把Vim一些自带的快捷键禁用，以防冲突
   {
     "key": "ctrl+oem_4",
     "command": "-extension.vim_ctrl+[",
@@ -423,10 +435,6 @@
     "key": "ctrl+q",
     "command": "-extension.vim_winCtrlQ",
     "when": "editorTextFocus && vim.active && vim.use<C-q> && !inDebugRepl"
-  },
-  {
-    "key": "alt+oem_3",
-    "command": "workbench.action.switchWindow"
-  }
-
+  }, 
+  
 ]  
