@@ -78,12 +78,12 @@ let g:WhichKeyDesc_GotoTest = "gt 在源代码和测试代码之间快速切换"
 nmap gm <action>(MethodUp)
 let g:WhichKeyDesc_MethodUp = "gm 将光标移动到上一个方法的声明处"
 "跳转到当前接口或抽象类的实现处
-nmap ga <action>(GotoImplementation)
-let g:WhichKeyDesc_GotoImplementation = "ga 跳转到当前接口或抽象类的实现处"
+nmap gi <action>(GotoImplementation)
+let g:WhichKeyDesc_GotoImplementation = "gi 跳转到当前接口或抽象类的实现处"
 
 " bookmark 切换书签
-nmap ma <action>(ToggleBookmark)
-let g:WhichKeyDesc_bookmark = "ma 书签"
+nmap bm <action>(ToggleBookmark)
+let g:WhichKeyDesc_bookmark = "bm 书签"
 
 "切换标签页
 nmap L <action>(NextTab)
@@ -508,7 +508,7 @@ nmap <leader>zc <action>(CollapseAllRegions)
 "仅 打开/关闭 目录推荐使用<leader>wo 其次 Alt + 1
 
 "按下 <leader>nn 将使焦点转移到 NERDTree 窗口
-nnoremap <leader>nn :NERDTreeFocus<CR> 
+nnoremap <leader>nn :NERDTreeFocus<CR>
 let g:WhichKeyDesc_NERDTreeOrNo_NERDTreeFocus = "<leader>nn 转移到目录树"
 
 "按下 <C-n> 将打开 NERDTree 文件资源管理器(==<leader>nn)
