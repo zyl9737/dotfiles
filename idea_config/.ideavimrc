@@ -41,7 +41,7 @@ set number relativenumber
 "--设置返回normal模式时回到英文输入法
 set keep-english-in-normal
 
-
+:set selectmode=mouse,ideaselection
 
 " ================================================================================================
 " 🌍🌍🌍 No Leader Keymaps 🌍🌍🌍
@@ -80,6 +80,9 @@ let g:WhichKeyDesc_MethodUp = "gm 将光标移动到上一个方法的声明处"
 "跳转到当前接口或抽象类的实现处
 nmap gi <action>(GotoImplementation)
 let g:WhichKeyDesc_GotoImplementation = "gi 跳转到当前接口或抽象类的实现处"
+"--函数定义跳转
+nmap gd <action>(GotoDeclaration)
+let g:WhichKeyDesc_GotoDeclaration = "gd 函数定义跳转"
 
 " bookmark 切换书签
 nmap bm <action>(ToggleBookmark)
@@ -103,7 +106,8 @@ vmap <leader>ef <action>(IntroduceField)
 " extract variable （引入变量）的重构操作:将选中的代码片段抽取为一个新的变量，并自动替换选中的代码片段为新的变量引用(Ctrl + Alt + V)
 vmap <leader>ev <action>(IntroduceVariable)
 
-
+"--退格键的行为
+vnoremap <BS> d
 
 " ================================================================================================
 " ⭐️⭐️⭐️ Leader Keymaps ⭐️⭐️⭐️ =====================================
