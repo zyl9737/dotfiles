@@ -85,8 +85,8 @@ nmap gd <action>(GotoDeclaration)
 let g:WhichKeyDesc_GotoDeclaration = "gd 函数定义跳转"
 
 " bookmark 切换书签
-nmap bm <action>(ToggleBookmark)
-let g:WhichKeyDesc_bookmark = "bm 书签"
+nmap mt <action>(ToggleBookmark)
+let g:WhichKeyDesc_bookmark = "mt 书签"
 
 "切换标签页
 nmap L <action>(NextTab)
