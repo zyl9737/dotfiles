@@ -57,11 +57,11 @@ let g:WhichKeyDesc_ShowIntentionActions = "<leader>ca 显示意图操作"
 nmap `` <Action>(ActivateTerminalToolWindow)
 let g:WhichKeyDesc_ActivateTerminalToolWindow = "`` 打开终端"
 
-nmap L <action>(NextTab)
-let g:WhichKeyDesc_NextTab = "L 切换到下一个标签页"
+map H ^
+let g:WhichKeyDesc_FirstNonBlank = "H 跳转到行首非空白字符 / 选区扩展到行首非空白字符"
 
-nmap H <action>(PreviousTab)
-let g:WhichKeyDesc_PreviousTab = "H 切换到上一个标签页"
+map L $
+let g:WhichKeyDesc_EndOfLine = "L 跳转到行尾 / 选区扩展到行尾"
 
 nmap <C-S> <action>(SaveAll)
 imap <C-S> <Esc><action>(SaveAll)
@@ -145,41 +145,48 @@ nmap <leader>db <Action>(Debug)
 let g:WhichKeyDesc_DebugOrDelete_DeleteAndCopyToClipboard = "<leader>dd 删除并复制到剪切板"
 vmap <leader>dd "+d
 
-"========== e ==========
-let g:WhichKeyDesc_ToggleExplorerOrExtract = "<leader>e 打开文件列表"
-nmap <leader>e <action>(ActivateProjectToolWindow)
+
+"========== h ==========
+nmap <leader>h <action>(PreviousTab)
+let g:WhichKeyDesc_PreviousTab = "<leader>h 上一个标签页"
+
+"========== l ==========
+nmap <leader>l <action>(NextTab)
+let g:WhichKeyDesc_NextTab = "<leader>l 下一个标签页"
+
 
 "========== m ==========
-let g:WhichKeyDesc_Translation = "<leader>m 书签"
-let g:WhichKeyDesc_CodeGlance_Bookmark = "<leader>mb 书签"
+let g:WhichKeyDesc_Bookmark = "<leader>m 书签"
+let g:WhichKeyDesc_Bookmark_Toggle = "<leader>mb 添加/移除书签"
 nmap <leader>mb <action>(ToggleBookmark)
+let g:WhichKeyDesc_Bookmark_Goto = "<leader>mg 跳转到书签"
+nmap <leader>mg <action>(GotoBookmark)
 
 "========== r ==========
 let g:WhichKeyDesc_RunOrRefactor = "<leader>r 运行&重构"
-" 重命名 (Shift + F6)
 let g:WhichKeyDesc_RunOrRefactor_Rename = "<leader>rr 重命名"
 nmap <leader>rr <action>(RenameElement)
-" 生成代码 (Alt + Insert)
 let g:WhichKeyDesc_RunOrRefactor_Generate = "<leader>rg 生成代码"
 nmap <leader>rg <action>(Generate)
-" 优化导入 (Ctrl + Alt + O)
 let g:WhichKeyDesc_RunOrRefactor_OptimizeImports = "<leader>ro 优化导入"
 nmap <leader>ro <action>(OptimizeImports)
-" 运行 (Alt + Shift + F10)
 let g:WhichKeyDesc_RunOrRefactor_Run = "<leader>ru 运行"
 nmap <leader>ru <action>(Run)
+let g:WhichKeyDesc_RunOrRefactor_RunClass = "<leader>rc 运行当前类"
+nmap <leader>rc <action>(RunClass)
+let g:WhichKeyDesc_RunOrRefactor_DebugClass = "<leader>rd 调试当前类"
+nmap <leader>rd <action>(DebugClass)
 
 "========== f ==========
-let g:WhichKeyDesc_Find = "<leader>f 查找"
-" 查找文件 (Ctrl + N)
+let g:WhichKeyDesc_Find = "<leader>f 查找&格式化"
 let g:WhichKeyDesc_Find_GotoFile = "<leader>ff 查找文件"
 nmap <leader>ff <action>(GotoFile)
-" 查找操作 (Ctrl + Shift + A)
 let g:WhichKeyDesc_Find_GotoAction = "<leader>fa 查找操作"
 nmap <leader>fa <action>(GotoAction)
-" 在项目中查找 (Ctrl + Shift + F)
 let g:WhichKeyDesc_Find_FindInPath = "<leader>fp 在项目中查找"
 nmap <leader>fp <action>(FindInPath)
+let g:WhichKeyDesc_Find_Format = "<leader>fr 格式化代码"
+nmap <leader>fr <action>(ReformatCode)
 
 " ================================================================================================
 " 🌸🌸🌸 NERDTree 🌸🌸🌸
@@ -193,8 +200,8 @@ nmap <leader>e :NERDTreeFind<CR>
 " ================================================================================================
 
 let g:EasyMotion_do_mapping = 0
-nmap <leader><leader> <Plug>(easymotion-s)
-let g:WhichKeyDesc_easymotion = "<leader><leader> EasyMotion快速跳转"
+nmap <leader><leader> <Plug>(easymotion-s2)
+let g:WhichKeyDesc_easymotion = "<leader><leader> EasyMotion快速跳转（双字符）"
 
 "=============================================================
 " 默认键位配置

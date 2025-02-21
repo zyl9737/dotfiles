@@ -1,225 +1,159 @@
 {
-    "code-runner.runInTerminal": true,
-    "code-runner.ignoreSelection": true,
-    "code-runner.fileDirectoryAsCwd": true,
-    //
-    "code-runner.executorMap": {
-        "javascript": "node",
-        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-        "c": "cd $dir && gcc $fileName -o .\\build\\$fileNameWithoutExt.exe && .\\build\\$fileNameWithoutExt.exe",
-        "cpp": "cd $dir && g++ $fileName -o .\\build\\$fileNameWithoutExt.exe && .\\build\\$fileNameWithoutExt.exe",
-        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "php": "php",
-        "python": "python -u",
-        "perl": "perl",
-        "perl6": "perl6",
-        "ruby": "ruby",
-        "go": "go run",
-        "lua": "lua",
-        "groovy": "groovy",
-        "powershell": "powershell -ExecutionPolicy ByPass -File",
-        "bat": "cmd /c",
-        "shellscript": "bash",
-        "fsharp": "fsi",
-        "csharp": "scriptcs",
-        "vbscript": "cscript //Nologo",
-        "typescript": "ts-node",
-        "coffeescript": "coffee",
-        "scala": "scala",
-        "swift": "swift",
-        "julia": "julia",
-        "crystal": "crystal",
-        "ocaml": "ocaml",
-        "r": "Rscript",
-        "applescript": "osascript",
-        "clojure": "lein exec",
-        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-        "racket": "racket",
-        "scheme": "csi -script",
-        "ahk": "autohotkey",
-        "autoit": "autoit3",
-        "dart": "dart",
-        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-        "haskell": "runhaskell",
-        "nim": "nim compile --verbosity:0 --hints:off --run",
-        "lisp": "sbcl --script",
-        "kit": "kitc --run",
-        "v": "v run",
-        "sass": "sass --style expanded",
-        "scss": "scss --style expanded",
-        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css"
-    },
-    "workbench.colorTheme": "Eva Dark",
-    "editor.fontSize": 20,
-    "security.workspace.trust.untrustedFiles": "open",
-    "git.autofetch": true,
-    "workbench.startupEditor": "none",
-    "workbench.iconTheme": "vscode-icons",
-    "remote.SSH.remotePlatform": {
-        "101.33.241.205": "linux",
-        "172.31.105.235": "linux",
-        "172.31.105.121": "linux",
-        "172.31.105.188": "linux",
-        "172.31.111.195": "linux",
-        "47.120.36.158": "linux",
-        "172.31.105.192": "linux",
-        "172.31.105.221": "linux",
-        "113.45.237.134": "linux"
-    },
-    "git.enableSmartCommit": true,
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
-        "markdown": true,
-        "scminput": false,
-        "python": true,
-        "cpp": false
-    },
-    "python.languageServer": "Pylance",
-    "python.terminal.executeInFileDir": true,
-    "editor.accessibilitySupport": "off",
-    "settingsSync.ignoredExtensions": [
-        "ms-vscode-remote.remote-containers",
-        "bazelbuild.vscode-bazel",
-        "batisteo.vscode-django",
-        "bigonesystems.django",
-        "tabbyml.vscode-tabby",
-        "hediet.vscode-drawio",
-        "golang.go",
-        "ms-azuretools.vscode-docker",
-        "twxs.cmake",
-        "ms-vscode.cmake-tools",
-        "techer.open-in-browser",
-        "ms-vscode.js-debug-companion",
-        "ms-vscode.cpptools",
-        "ms-vscode.cpptools-extension-pack",
-        "ms-vscode.cpptools-themes",
-        "leetcode.vscode-leetcode",
-        "rust-lang.rust-analyzer"
-    ],
-    "peacock.favoriteColors": [
-        {
-            "name": "Angular Red",
-            "value": "#dd0531"
-        },
-        {
-            "name": "Azure Blue",
-            "value": "#007fff"
-        },
-        {
-            "name": "JavaScript Yellow",
-            "value": "#f9e64f"
-        },
-        {
-            "name": "Mandalorian Blue",
-            "value": "#1857a4"
-        },
-        {
-            "name": "Node Green",
-            "value": "#215732"
-        },
-        {
-            "name": "React Blue",
-            "value": "#61dafb"
-        },
-        {
-            "name": "Something Different",
-            "value": "#832561"
-        },
-        {
-            "name": "Svelte Orange",
-            "value": "#ff3d00"
-        },
-        {
-            "name": "Vue Green",
-            "value": "#42b883"
-        }
-    ],
-    "redhat.telemetry.enabled": true,
-    "update.mode": "manual",
-    "explorer.confirmDelete": false,
-    "vscode-office.pasterImgPath": "./assets/${fileName}_${now}.png",
-    "workbench.editorAssociations": {
-        "{git,gitlens}:/**/*.{md,csv}": "default",
-        "{git,gitlens}:/**/*.{md,csv,svg}": "default"
-    },
-    "vscode-office.editorTheme": "Auto",
-    "github.copilot.advanced": {
-        "authProvider": "github"
-    },
-    "workbench.editor.enablePreview": false,
-    "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.fixAll.ruff": "explicit",
-            "source.organizeImports.ruff": "explicit"
-        }
-    },
-    "workbench.settings.applyToAllProfiles":  [   
-    ],
-    "cmake.configureOnOpen": true,
-    "python.analysis.inlayHints.callArgumentNames": "partial",
-    "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.analysis.inlayHints.pytestParameters": true,
-    "python.autoComplete.extraPaths": [],
-    "python.analysis.extraPaths": [],
-    "github.copilot.editor.enableAutoCompletions": true,
-    "cmake.debugConfig": {},
-    "update.enableWindowsBackgroundUpdates": false,
-    "debug.showVariableTypes": true,
-    "cph.general.firstTime": false,
-    "cph.language.cpp.SubmissionCompiler": "GNU G++14 6.4.0",   // 使用 C++14 标准
-    "cph.language.cpp.Args": "-std=c++14 -O2",
-    "ruff.lineLength": 200,
-    "terminal.integrated.enableMultiLinePasteWarning": "never",
-    "cmake.pinnedCommands": [
-        "workbench.action.tasks.configureTaskRunner",
-        "workbench.action.tasks.runTask"
-    ],
-    // "terminal.integrated.profiles.windows": {
-    //     "PowerShell": {
-    //       "source": "PowerShell",
-    //       "overrideName": true,
-    //       "args": ["-NoExit", "/c", "chcp 65001"],
-    //       "icon": "terminal-powershell",
-    //       "env": {
-    //         "TEST_VAR": "value"
-    //       }
-    //     }
-    //   },
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "[cpp]": {
-        "editor.wordBasedSuggestions": "off",
-        "editor.suggest.insertMode": "replace",
-        "editor.semanticHighlighting.enabled": true
-    },
-    "settingsSync.ignoredSettings": [
-        "terminal.integrated.fontFamily",
-    ],
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
-    "window.menuBarVisibility": "compact",
-    "projectManager.git.baseFolders": [
-        "D:\\MyGitDemo"
-    ],
-    "remote.extensionKind": { 
-        "alefragnani.project-manager": [
-            "workspace"
-        ]
-    },
-    "vim.hlsearch": true,
-    "git.confirmSync": false,
-    "background.fullscreen": {
-        "images": ["file:///G:/BaiduSyncdisk/BaiduNotes/imgs/idebackgroud.png"], // 图片的url
-        "opacity": 0.91, // 建议值 0.85 ~ 0.95
-        "size": "cover", // css, 建议使用 `cover`自适应，或者 `contain`、`200px 200px`
-        "position": "center", // 同 `background-position`, 默认 `center`
-        "interval": 0 // 单位 `秒`，轮播时候图片切换间隔，默认 `0` 表示不开启
-    },
-    "cmake.showOptionsMovedNotification": false,
-    "editor.minimap.autohide": true,
-    "editor.fontFamily": "Fira Code,Consolas, 'Courier New', monospace",
-    "editor.fontLigatures": true  
- }
+  "code-runner.runInTerminal": true,
+  "code-runner.ignoreSelection": true,
+  "code-runner.fileDirectoryAsCwd": true,
+  //
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o .\\build\\$fileNameWithoutExt.exe && .\\build\\$fileNameWithoutExt.exe",
+    "cpp": "cd $dir && g++ $fileName -o .\\build\\$fileNameWithoutExt.exe && .\\build\\$fileNameWithoutExt.exe",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runhaskell",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css"
+  },
+  "editor.fontSize": 20,
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.autofetch": true,
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "vscode-icons",
+  "remote.SSH.remotePlatform": {
+    "hw": "linux",
+    "172.31.109.43": "linux"
+  },
+  "git.enableSmartCommit": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "python": true,
+    "cpp": false
+  },
+  "python.languageServer": "Pylance",
+  "editor.accessibilitySupport": "off",
+  "settingsSync.ignoredExtensions": [],
+  "redhat.telemetry.enabled": true,
+  "update.mode": "manual",
+  "explorer.confirmDelete": false,
+  "vscode-office.pasterImgPath": "./assets/${fileName}_${now}.png",
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "{git,gitlens}:/**/*.{md,csv}": "default",
+    "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default",
+    "{git,gitlens}:/**/*.{md,csv,svg}": "default"
+  },
+  "vscode-office.editorTheme": "Light",
+  "github.copilot.advanced": {
+    "authProvider": "github"
+  },
+  "workbench.editor.enablePreview": false,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "workbench.settings.applyToAllProfiles": [
+    "editor.fontSize",
+    "editor.fontFamily",
+    "terminal.integrated.fontFamily"
+  ],
+  "cmake.configureOnOpen": true,
+  "python.analysis.inlayHints.callArgumentNames": "partial",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.autoComplete.extraPaths": ["${workspaceFolder}"],
+  "python.analysis.extraPaths": ["${workspaceFolder}"],
+  "github.copilot.editor.enableAutoCompletions": true,
+  "cmake.debugConfig": {},
+  "update.enableWindowsBackgroundUpdates": false,
+  "debug.showVariableTypes": true,
+  "cph.general.firstTime": false,
+  "cph.language.cpp.SubmissionCompiler": "GNU G++14 6.4.0", // 使用 C++14 标准
+  "cph.language.cpp.Args": "-std=c++14 -O2",
+  "ruff.lineLength": 120,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "[cpp]": {
+    "editor.wordBasedSuggestions": "off",
+    "editor.suggest.insertMode": "replace",
+    "editor.semanticHighlighting.enabled": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true
+  },
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "remote.extensionKind": {
+    "alefragnani.project-manager": ["workspace"]
+  },
+  "vim.hlsearch": true,
+  "git.confirmSync": false,
+  "cmake.showOptionsMovedNotification": false,
+  "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "vscode-office.quickOpen": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "vim.mouseSelectionGoesIntoVisualMode": false,
+  "fnMap.registrationCode": "WA3+lIqyGqZu7XkR7xTLRoUPqGUqoUU2W67qbBOWYKpRUOurBfm3OMi6cZlQ5wVuExAZKGNs6WmGzwP3YZQkhB19myhxfVlMazpP0ktFoKGwNsKxQjn2atrjpa+sQnwNXeVHRaiQopQIlm31ewwqqIVUXxQtartbdCG/ymK5SpCPU53fdeQZh/D2tqGnYhMTTzXYMOwmQTuTjywAQ3TDBj7m7or/d8iT92FyqRxL2rzXgwsv5vj7WByem51XPTqak7pWUqJCOsBGodM6aWL7zVAppRsWdy90xRl78f5X6Lgu5yPLx8VyFzoGXZlnk2yxN3D4G9IXUx/1h5kirsRXig==",
+  "vscode-office.openOutline": true,
+  "window.menuBarVisibility": "compact",
+  "workbench.activityBar.location": "top",
+  "excalidraw.theme": "light",
+  "remote.SSH.experimental.chat": true,
+  "python.terminal.shellIntegration.enabled": true,
+  "python.terminal.executeInFileDir": true,
+  "notebook.markup.fontSize": 18,
+  "vscode-office.editorLanguage": "zh_CN",
+  "editor.minimap.showSlider": "always",
+  "git.openRepositoryInParentFolders": "always",
+  "extensions.ignoreRecommendations": true,
+}
