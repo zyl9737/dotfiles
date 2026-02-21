@@ -1,0 +1,229 @@
+" ================================================================================================
+" 🍰🍰🍰 Extensions 🍰🍰🍰
+" ================================================================================================
+Plug 'preservim/nerdtree'
+Plug 'easymotion/vim-easymotion'
+
+"下列插件需要在IDEA中下载
+"ideaVim
+"IdeaVim-EasyMotion
+"IdeaVimExtension
+"which-key
+"CodeGlance Pro
+"Translation
+
+" ================================================================================================
+" 🐧🐧🐧 Basic settings 🐧🐧🐧
+" ================================================================================================
+
+set easymotion
+set scrolloff=10
+set incsearch
+set ignorecase
+set hlsearch
+set keep-english-in-normal
+set selectmode=mouse,ideaselection
+set ideamarks
+
+" ================================================================================================
+" 🌍🌍🌍 No Leader Keymaps 🌍🌍🌍
+" ================================================================================================
+
+imap jk <Esc>
+
+
+nmap gi <action>(GotoImplementation)
+let g:WhichKeyDesc_GotoImplementation = "gi 跳转到当前接口或抽象类的实现处"
+
+nmap gd <action>(GotoDeclaration)
+let g:WhichKeyDesc_GotoDeclaration = "gd 跳转到函数定义或引用"
+
+nmap gr <Action>(FindUsages)
+let g:WhichKeyDesc_FindUsages = "gr 查找函数引用"
+
+nmap gp <Action>(GotoSuperMethod)
+let g:WhichKeyDesc_GotoSuperMethod = "gp 跳转到被实现的类或方法"
+
+nmap gc <Action>(CommentByLineComment)
+let g:WhichKeyDesc_CommentByLineComment = "gc 注释/取消注释当前行"
+xmap gc <Action>(CommentByLineComment)<Esc>
+let g:WhichKeyDesc_CommentByLineComment = "gc 注释/取消注释选中行"
+
+nmap <leader>ca <Action>(ShowIntentionActions)
+let g:WhichKeyDesc_ShowIntentionActions = "<leader>ca 显示意图操作"
+xmap <leader>ca <Action>(ShowIntentionActions)
+let g:WhichKeyDesc_ShowIntentionActions = "<leader>ca 显示意图操作"
+
+nmap `` <Action>(ActivateTerminalToolWindow)
+let g:WhichKeyDesc_ActivateTerminalToolWindow = "`` 打开终端"
+
+map H ^
+let g:WhichKeyDesc_FirstNonBlank = "H 跳转到行首非空白字符 / 选区扩展到行首非空白字符"
+
+map L $
+let g:WhichKeyDesc_EndOfLine = "L 跳转到行尾 / 选区扩展到行尾"
+
+nmap <C-S> <action>(SaveAll)
+imap <C-S> <Esc><action>(SaveAll)
+let g:WhichKeyDesc_SaveAll = "<C-S> 保存文档"
+
+vmap <leader>em <action>(ExtractMethod)
+let g:WhichKeyDesc_ExtractMethod = "<leader>em 提取方法"
+
+vmap <leader>ec <action>(IntroduceConstant)
+let g:WhichKeyDesc_IntroduceConstant = "<leader>ec 引入常量"
+
+vmap <leader>ef <action>(IntroduceField)
+let g:WhichKeyDesc_IntroduceField = "<leader>ef 引入字段"
+
+vmap <leader>ev <action>(IntroduceVariable)
+let g:WhichKeyDesc_IntroduceVariable = "<leader>ev 引入变量"
+
+vnoremap <BS> d
+
+" 方法导航和修改点/异常跳转
+nmap [[ <Action>(MethodUp)
+let g:WhichKeyDesc_MethodUpBracket = "[[ 跳转到上一个方法"
+
+nmap ]] <Action>(MethodDown)
+let g:WhichKeyDesc_MethodDownBracket = "]] 跳转到下一个方法"
+
+nmap (( <Action>(VcsShowPrevChangeMarker)
+let g:WhichKeyDesc_PrevChangeMarker = "(( 跳转到上一个修改点"
+
+nmap )) <Action>(VcsShowNextChangeMarker)
+let g:WhichKeyDesc_NextChangeMarker = ")) 跳转到下一个修改点"
+
+nmap [e <Action>(GotoPreviousError)
+let g:WhichKeyDesc_GotoPreviousError = "[e 跳转到上一个异常"
+
+nmap ]e <Action>(GotoNextError)
+let g:WhichKeyDesc_GotoNextErrorBracket = "]e 跳转到下一个异常"
+
+
+" ================================================================================================
+" ⭐️⭐️⭐️ Leader Keymaps ⭐️⭐️⭐️
+" ================================================================================================
+
+let mapleader = " "
+
+" ================================================================================================
+" 👻👻👻 Which-Key 👻👻👻
+" ================================================================================================
+
+set which-key
+set notimeout
+
+" ================================================================================================
+" 🌟🌟🌟 <leader>详细配置 🌟🌟🌟
+" ================================================================================================
+
+let g:WhichKeyDesc_LeaderKeymap = "<leader> 🌟🌟🌟紫色为二级目录🌟🌟🌟"
+
+"========== c ==========
+let g:WhichKeyDesc_CodeAndClose = "<leader>c 代码补全"
+let g:WhichKeyDesc_CodeAndClose_CodeCompletion = "<leader>cc 代码自动补全"
+nmap <leader>cc <action>(CodeCompletion)
+let g:WhichKeyDesc_CodeAndClose_SmartTypeCompletion = "<leader>cs 智能代码自动补全"
+nmap <leader>cs <action>(SmartTypeCompletion)
+
+"========== w ==========
+let g:WhichKeyDesc_CodeAndClose = "<leader>w 标签页"
+let g:WhichKeyDesc_CodeAndClose_CloseAllEditors = "<leader>wa 关闭所有标签页"
+nmap <leader>wa <action>(CloseAllEditors)
+let g:WhichKeyDesc_CodeAndClose_CloseEditor = "<leader>wc 关闭当前标签页"
+nmap <leader>wc <action>(CloseEditor)
+let g:WhichKeyDesc_CodeAndClose_CloseAllEditorsButActive = "<leader>wo 关闭其他标签页"
+nmap <leader>wo <action>(CloseAllEditorsButActive)
+
+"========== d ==========
+let g:WhichKeyDesc_DeBugOrDelete = "<leader>d 调试&删除"
+let g:WhichKeyDesc_DebugOrDelete_BreakPoint = "<leader>dp 打断点/解除断点"
+nmap <leader>dp <Action>(ToggleLineBreakpoint)
+let g:WhichKeyDesc_DebugOrDelete_DeBug = "<leader>db 调试"
+nmap <leader>db <Action>(Debug)
+let g:WhichKeyDesc_DebugOrDelete_DeleteAndCopyToClipboard = "<leader>dd 删除并复制到剪切板"
+vmap <leader>dd "+d
+
+
+"========== h ==========
+nmap <leader>h <action>(PreviousTab)
+let g:WhichKeyDesc_PreviousTab = "<leader>h 上一个标签页"
+
+"========== l ==========
+nmap <leader>l <action>(NextTab)
+let g:WhichKeyDesc_NextTab = "<leader>l 下一个标签页"
+
+
+"========== m ==========
+let g:WhichKeyDesc_Bookmark = "<leader>m 书签"
+let g:WhichKeyDesc_Bookmark_Toggle = "<leader>mb 添加/移除书签"
+nmap <leader>mb <action>(ToggleBookmark)
+let g:WhichKeyDesc_Bookmark_Goto = "<leader>mg 跳转到书签"
+nmap <leader>mg <action>(GotoBookmark)
+
+"========== r ==========
+let g:WhichKeyDesc_RunOrRefactor = "<leader>r 运行&重构"
+let g:WhichKeyDesc_RunOrRefactor_Rename = "<leader>rr 重命名"
+nmap <leader>rr <action>(RenameElement)
+let g:WhichKeyDesc_RunOrRefactor_Generate = "<leader>rg 生成代码"
+nmap <leader>rg <action>(Generate)
+let g:WhichKeyDesc_RunOrRefactor_OptimizeImports = "<leader>ro 优化导入"
+nmap <leader>ro <action>(OptimizeImports)
+let g:WhichKeyDesc_RunOrRefactor_Run = "<leader>ru 运行"
+nmap <leader>ru <action>(Run)
+let g:WhichKeyDesc_RunOrRefactor_RunClass = "<leader>rc 运行当前类"
+nmap <leader>rc <action>(RunClass)
+let g:WhichKeyDesc_RunOrRefactor_DebugClass = "<leader>rd 调试当前类"
+nmap <leader>rd <action>(DebugClass)
+
+"========== f ==========
+let g:WhichKeyDesc_Find = "<leader>f 查找&格式化"
+let g:WhichKeyDesc_Find_GotoFile = "<leader>ff 查找文件"
+nmap <leader>ff <action>(GotoFile)
+let g:WhichKeyDesc_Find_GotoAction = "<leader>fa 查找操作"
+nmap <leader>fa <action>(GotoAction)
+let g:WhichKeyDesc_Find_FindInPath = "<leader>fp 在项目中查找"
+nmap <leader>fp <action>(FindInPath)
+let g:WhichKeyDesc_Find_Format = "<leader>fr 格式化代码"
+nmap <leader>fr <action>(ReformatCode)
+
+" ================================================================================================
+" 🌸🌸🌸 NERDTree 🌸🌸🌸
+" ================================================================================================
+
+set NERDTree
+nmap <leader>e :NERDTreeFind<CR>
+
+" ================================================================================================
+" 🌸🌸🌸 Easymotion 🌸🌸🌸
+" ================================================================================================
+
+let g:EasyMotion_do_mapping = 0
+nmap <leader><leader> <Plug>(easymotion-s2)
+let g:WhichKeyDesc_easymotion = "<leader><leader> EasyMotion快速跳转（双字符）"
+
+"=============================================================
+" 默认键位配置
+"=============================================================
+sethandler <C-F> a:ide
+sethandler <C-B> a:ide
+sethandler <C-U> a:ide
+sethandler <C-T> a:ide
+sethandler <C-K> a:ide
+sethandler <C-S> a:ide
+sethandler <C-E> a:ide
+sethandler <C-Q> a:ide
+sethandler <C-P> a:ide
+sethandler <C-N> a:ide
+sethandler <C-M> a:ide
+sethandler <C-L> a:ide
+sethandler <C-C> a:ide
+sethandler <C-D> a:ide
+sethandler <C-I> a:ide
+sethandler <C-O> a:ide
+sethandler <C-W> a:ide
+sethandler <C-A> a:ide
+sethandler <C-X> a:ide
+sethandler <C-V> a:ide
+"=============================================================
