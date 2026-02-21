@@ -1,1 +1,4 @@
 .env
+.ssh/id_*
+.ssh/known_hosts
+!.ssh/config
