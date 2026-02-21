@@ -7,8 +7,18 @@ export NVM_DIR="$HOME/.nvm"
 . "$HOME/.cargo/env"
 
 export PATH="/opt/nvim-linux-x86_64/bin:$PATH"
-
+export EDITOR=nvim
 export PATH="/home/zyl/.fzf/bin:$PATH"
 eval "$(fzf --bash)"
 eval "$(starship init bash)"
+
+## 给yazi设置一个别名，方便使用
+function yy() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
 
