@@ -2,7 +2,7 @@ use `stow` to manage the configuration files.
 
 ## OS: Ubuntu 22.04 LTS
 - Neovim: adapted from Lazyvim with a little bit of my own configuration.
-  - use LazyExtras: some extra plugins that I use, such as copilot, chatgpt, etc.
+  - use LazyExtras: some extra plugins that I use, such as copilot, avante, etc.
   - change the theme to tokyo night storm.
 
 - Tmux: adapted from ohmyTmux, just change the borderlines color.
@@ -13,6 +13,7 @@ use `stow` to manage the configuration files.
   - nvm 
   - cargo
   - starship
+
   add `[ -f ~/.bash_syc ] && source ~/.bash_syc` to `.bashrc` to load the additional configuration file.
 
 ## OS: Windows 11
