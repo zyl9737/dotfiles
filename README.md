@@ -13,6 +13,7 @@ use `stow` to manage the configuration files.
   - nvm 
   - cargo
   - starship
+  - yazi
 
   add `[ -f ~/.bash_syc ] && source ~/.bash_syc` to `.bashrc` to load the additional configuration file.
 
