@@ -1,0 +1,5 @@
+[[mgr.prepend_keymap]]
+on = [ "g", "s" ]
+run = "cd sftp://my-server"
+desc = "Go to my-server"
+
