@@ -1,12 +1,11 @@
 use `stow` to manage the configuration files.
 
-## OS: Ubuntu 22.04 LTS
+## OS: Ubuntu 24.04 LTS
 - Neovim: adapted from Lazyvim with a little bit of my own configuration.
   - use LazyExtras: some extra plugins that I use, such as copilot, avante, etc.
   - change the theme to tokyo night storm.
 
-- Tmux: adapted from ohmyTmux, just change the borderlines color.
-  - `tmux_conf_theme_pane_border="$tmux_conf_theme_colour_3" # Make the boundary lines clearer.`
+- Tmux: a simple configuration for tmux, with ctrl-a as the prefix key, and some simple configuration for the status bar.
 
 - bash: additional functions and aliases: add additional `.bash_syc` file for more personal configuration. 
   - fzf 
