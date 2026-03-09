@@ -2,4 +2,4 @@
 .ssh/id_*
 .ssh/known_hosts
 !.ssh/config
-nvim/.config/github-copilot/apps.json
+nvim/.config/github-copilot
