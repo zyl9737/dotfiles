@@ -1,6 +1,6 @@
 // 将键绑定放在此文件中以覆盖默认值
 [
-  // Navigation
+  // === 导航 ===
   {
     "command": "workbench.action.navigateLeft",
     "key": "ctrl-h"
@@ -8,206 +8,6 @@
   {
     "command": "workbench.action.navigateRight",
     "key": "ctrl-l"
-  },
-  {
-    "command": "workbench.action.navigateUp",
-    "key": "ctrl-j"
-  },
-  {
-    "command": "workbench.action.navigateDown",
-    "key": "ctrl-k"
-  },
-  {
-    "command": "workbench.action.showAllEditors",
-    "key": "space ,",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "args": {
-      "commands": [
-        "workbench.action.toggleSidebarVisibility",
-        "workbench.files.action.focusFilesExplorer"
-      ]
-    },
-    "command": "runCommands",
-    "key": "space e",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
-  },
-  {
-    "args": {
-      "commands": [
-        "workbench.action.toggleSidebarVisibility",
-        "workbench.action.focusActiveEditorGroup"
-      ]
-    },
-    "command": "runCommands",
-    "key": "space ,",
-    "when": "sideBarFocus && !inputFocus"
-  },
-  {
-    "command": "workbench.action.toggleSidebarVisibility",
-    "key": "space ,",
-    "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible"
-  },
-  {
-    "command": "workbench.action.nextEditorInGroup",
-    "key": "space l",
-    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "command": "workbench.action.previousEditorInGroup",
-    "key": "space h",
-    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-  },
-  // Coding
-  {
-    "command": "extension.aceJump",
-    "key": "ctrl+;",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "command": "extension.aceJump.line",
-    "key": "alt+;",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "command": "editor.action.moveLinesDownAction",
-    "key": "shift-j",
-    "when": "vim.mode == 'VisualLine' && editorTextFocus"
-  },
-  {
-    "command": "editor.action.moveLinesUpAction",
-    "key": "shift-k",
-    "when": "vim.mode == 'VisualLine' && editorTextFocus"
-  },
-  {
-    "command": "editor.action.showHover",
-    "key": "shift-k",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "command": "editor.action.codeAction",
-    "key": "space c a",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "command": "editor.action.rename",
-    "key": "space c r",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "command": "workbench.action.gotoSymbol",
-    "key": "space c s",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "command": "workbench.action.quickOpen",
-    "key": "space space",
-    "when": "editorTextFocus && vim.mode == 'Normal' || !inputFocus && vim.mode == 'Normal'"
-  },
-  {
-    "command": "editor.action.revealDefinition",
-    "key": "space g d",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "command": "editor.action.goToReferences",
-    "key": "space g r",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "command": "editor.action.goToImplementation",
-    "key": "space g i",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "command": "workbench.action.findInFiles",
-    "key": "space s g",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "args": {
-      "commands": [
-        "workbench.view.scm",
-        "workbench.scm.focus"
-      ]
-    },
-    "command": "runCommands",
-    "key": "space g g",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "key": "ctrl-n",
-    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-  },
-  // File Explorer
-  {
-    "command": "renameFile",
-    "key": "r",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "filesExplorer.copy",
-    "key": "c",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "filesExplorer.paste",
-    "key": "p",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "filesExplorer.cut",
-    "key": "x",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "deleteFile",
-    "key": "d",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "explorer.newFile",
-    "key": "a",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "explorer.newFolder",
-    "key": "shift-a",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "explorer.openToSide",
-    "key": "s",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "args": {
-      "commands": [
-        "workbench.action.splitEditorDown",
-        "explorer.openAndPassFocus",
-        "workbench.action.closeOtherEditors"
-      ]
-    },
-    "command": "runCommands",
-    "key": "shift-s",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "command": "explorer.openAndPassFocus",
-    "key": "enter",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus"
-  },
-  {
-    "command": "list.toggleExpand",
-    "key": "enter",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
-  },
-  // extral
-  {
-    "command": "cph.runTestCases",
-    "key": "ctrl+alt+t"
   },
   {
     "command": "workbench.action.splitEditor",
@@ -221,226 +21,17 @@
     "command": "workbench.action.toggleAuxiliaryBar",
     "key": "ctrl+alt+\\"
   },
-  // Alt+`切换窗口
-  {
-    "command": "workbench.action.switchWindow",
-    "key": "alt+oem_3"
-  },
-  {
-    "command": "-cph.runTestCases",
-    "key": "ctrl+alt+b"
-  },
-  // 把Vim一些自带的快捷键禁用，以防冲突
-  {
-    "command": "-extension.vim_ctrl+[",
-    "key": "ctrl+oem_4",
-    "when": "editorTextFocus && vim.active && vim.use<C-[> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+]",
-    "key": "ctrl+oem_6",
-    "when": "editorTextFocus && vim.active && vim.use<C-]> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+^",
-    "key": "ctrl+unknown",
-    "when": "editorTextFocus && vim.active && vim.use<C-^> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+6",
-    "key": "ctrl+6",
-    "when": "editorTextFocus && vim.active && vim.use<C-6> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+a",
-    "key": "ctrl+a",
-    "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+b",
-    "key": "ctrl+b",
-    "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "command": "-extension.vim_ctrl+backspace",
-    "key": "ctrl+backspace",
-    "when": "editorTextFocus && vim.active && vim.use<C-BS> && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "command": "-extension.vim_ctrl+c",
-    "key": "ctrl+c",
-    "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+d",
-    "key": "ctrl+d",
-    "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+k",
-    "key": "ctrl+k",
-    "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+down",
-    "key": "ctrl+down",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "command": "-extension.vim_ctrl+e",
-    "key": "ctrl+e",
-    "when": "editorTextFocus && vim.active && vim.use<C-e> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+end",
-    "key": "ctrl+end",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "command": "-extension.vim_ctrl+f",
-    "key": "ctrl+f",
-    "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "command": "-extension.vim_ctrl+g",
-    "key": "ctrl+g",
-    "when": "editorTextFocus && vim.active && vim.use<C-g> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+h",
-    "key": "ctrl+h",
-    "when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+home",
-    "key": "ctrl+home",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "command": "-extension.vim_ctrl+z",
-    "key": "ctrl+z",
-    "when": "editorTextFocus && vim.active && vim.use<C-z> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+i",
-    "key": "ctrl+i",
-    "when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+j",
-    "key": "ctrl+j",
-    "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+left",
-    "key": "ctrl+left",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "command": "-extension.vim_ctrl+m",
-    "key": "ctrl+m",
-    "when": "editorTextFocus && vim.active && vim.use<C-m> && !inDebugRepl || vim.active && vim.use<C-m> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-m> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
-  },
-  {
-    "command": "-extension.vim_ctrl+n",
-    "key": "ctrl+n",
-    "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
-  },
-  {
-    "command": "-extension.vim_ctrl+o",
-    "key": "ctrl+o",
-    "when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+p",
-    "key": "ctrl+p",
-    "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
-  },
-  {
-    "command": "-extension.vim_ctrl+pagedown",
-    "key": "ctrl+pagedown",
-    "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+pageup",
-    "key": "ctrl+pageup",
-    "when": "editorTextFocus && vim.active && vim.use<C-pageup> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+r",
-    "key": "ctrl+r",
-    "when": "editorTextFocus && vim.active && vim.use<C-r> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+right",
-    "key": "ctrl+right",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "command": "-extension.vim_ctrl+s",
-    "key": "ctrl+s",
-    "when": "editorTextFocus && vim.active && vim.use<C-s> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+shift+2",
-    "key": "ctrl+shift+2",
-    "when": "editorTextFocus && vim.active && vim.use<C-shift+2>"
-  },
-  {
-    "command": "-extension.vim_ctrl+space",
-    "key": "ctrl+space",
-    "when": "editorTextFocus && vim.active && vim.use<C-space> && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "command": "-extension.vim_ctrl+t",
-    "key": "ctrl+t",
-    "when": "editorTextFocus && vim.active && vim.use<C-t> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+u",
-    "key": "ctrl+u",
-    "when": "editorTextFocus && vim.active && vim.use<C-u> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+up",
-    "key": "ctrl+up",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "command": "-extension.vim_ctrl+v",
-    "key": "ctrl+v",
-    "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+w",
-    "key": "ctrl+w",
-    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+x",
-    "key": "ctrl+x",
-    "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_ctrl+y",
-    "key": "ctrl+y",
-    "when": "editorTextFocus && vim.active && vim.use<C-y> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_navigateCtrlL",
-    "key": "ctrl+l",
-    "when": "editorTextFocus && vim.active && vim.use<C-l> && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_winCtrlQ",
-    "key": "ctrl+q",
-    "when": "editorTextFocus && vim.active && vim.use<C-q> && !inDebugRepl"
-  },
   {
     "command": "workbench.action.togglePanel",
     "key": "ctrl+alt+oem_2",
     "when": "config.workbench.layoutControl.type == 'both' || config.workbench.layoutControl.type == 'toggles'"
   },
+  // === 窗口管理 ===
+  {
+    "command": "workbench.action.switchWindow",
+    "key": "alt+oem_3"
+  },
+  // === 编辑器操作 ===
   {
     "command": "editor.action.inlineSuggest.acceptNextLine",
     "key": "alt+j"
@@ -451,111 +42,55 @@
     "when": "inlineSuggestionVisible && !editorReadonly"
   },
   {
-    "command": "-editor.action.inlineSuggest.acceptNextWord",
-    "key": "ctrl+right",
-    "when": "inlineSuggestionVisible && !editorReadonly"
+    "command": "editor.action.smartSelect.grow",
+    "key": "alt+w",
+    "when": "editorTextFocus"
   },
   {
-    "command": "-extension.vim_cmd+alt+down",
-    "key": "shift+alt+down",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
-  },
-  {
-    "command": "-extension.vim_cmd+alt+up",
-    "key": "shift+alt+up",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
-  },
-  {
-    "command": "-list.focusPageDown",
-    "key": "ctrl+d",
-    "when": "listFocus && !inputFocus"
-  },
-  {
-    "command": "editor.action.copyLinesDownAction",
-    "key": "ctrl+d",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "command": "-editor.action.copyLinesDownAction",
-    "key": "shift+alt+down",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "command": "editor.action.deleteLines",
-    "key": "ctrl+y",
-    "when": "textInputFocus && !editorReadonly"
-  },
-  {
-    "command": "-editor.action.deleteLines",
-    "key": "ctrl+shift+k",
-    "when": "textInputFocus && !editorReadonly"
-  },
-  {
-    "command": "-workbench.action.toggleSidebarVisibility",
+    "command": "editor.action.revealDeclaration",
     "key": "ctrl+b"
   },
+  // === 文件操作 ===
   {
-    "command": "list.showHover",
-    "key": "ctrl+b",
-    "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+    "command": "explorer.newFile",
+    "key": "ctrl+alt+insert"
   },
   {
-    "command": "-list.showHover",
-    "key": "ctrl+k ctrl+i",
-    "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+    "key": "ctrl+p",
+    "command": "workbench.action.openRecent"
   },
   {
-    "command": "editor.action.showHover",
-    "key": "ctrl+b",
+    "key": "ctrl+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  // 切换到CodeMap
+  {
+    "key": "alt+2",
+    "command": "workbench.view.extension.codemap-explorer"
+  },
+  // === AI 辅助 ===
+  {
+    "command": "github.copilot.generate",
+    "key": "alt+oem_comma"
+  },
+  // === 禁用默认绑定 ===
+  {
+    "key": "shift+f12",
+    "command": "-workbench.action.resetViewLocations"
+  },
+  {
+    "key": "alt+j",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-editor.action.smartSelect.grow",
     "when": "editorTextFocus"
   },
   {
-    "command": "-editor.action.showHover",
-    "key": "ctrl+k ctrl+i",
-    "when": "editorTextFocus"
+    "key": "ctrl+oem_3",
+    "command": "-workbench.action.selectTheme"
   },
-  {
-    "command": "editor.debug.action.showDebugHover",
-    "key": "ctrl+b",
-    "when": "editorTextFocus && inDebugMode"
-  },
-  {
-    "command": "-editor.debug.action.showDebugHover",
-    "key": "ctrl+k ctrl+i",
-    "when": "editorTextFocus && inDebugMode"
-  },
-  {
-    "command": "workbench.action.navigateBack",
-    "key": "alt+n",
-    "when": "canNavigateBack"
-  },
-  {
-    "command": "-workbench.action.navigateBack",
-    "key": "alt+left",
-    "when": "canNavigateBack"
-  },
-  {
-    "command": "workbench.action.navigateForward",
-    "key": "alt+m",
-    "when": "canNavigateForward"
-  },
-  {
-    "command": "-workbench.action.navigateForward",
-    "key": "alt+right",
-    "when": "canNavigateForward"
-  },
-  {
-    "command": "-workbench.action.quickOpen",
-    "key": "ctrl+e"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-    "key": "ctrl+shift+e",
-    "command": "-workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  }
+
 ]
