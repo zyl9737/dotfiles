@@ -15,6 +15,7 @@ h:: Send {left}
 j:: Send {down}
 l:: Send {right}
 u:: Send {BS}
+i:: Send {Del}
 n:: Send {home}
 m:: Send {end}
 q:: Send {Escape}
