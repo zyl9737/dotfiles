@@ -1,0 +1,52 @@
+mixin:
+  dns:
+    enable: true
+    enhanced-mode: fake-ip
+    nameserver:
+      - https://dns.alidns.com/dns-query
+      - 223.5.5.5
+    fallback:
+      - https://dns.google/dns-query
+      - 8.8.8.8
+    nameserver-policy:
+      'geosite:wechat,weixin,qq': 223.5.5.5
+      'geosite:cn': 223.5.5.5
+    
+    fake-ip-filter:
+      - +.stun.*.*
+      - +.stun.*.*.*
+      - +.stun.*.*.*.*
+      - +.stun.*.*.*.*.*
+      - "*.n.n.srv.nintendo.net"
+      - +.stun.playstation.net
+      - xbox.*.*.microsoft.com
+      - "*.*.xboxlive.com"
+      - "*.msftncsi.com"
+      - "*.msftconnecttest.com"
+      - WORKGROUP
+      - "+.tailscale.net"
+      - "100.64.0.0/10"
+      - "*.weixin.qq.com"
+      - "*.qpic.cn"
+      - "*.wechat.com"
+      - "*.tencent.com"
+
+  tun:
+    enable: true
+    stack: gvisor
+    auto-route: true
+    auto-detect-interface: true
+    dns-hijack:
+      - any:53
+    ipv6: true
+    mtu: 1400
+
+  sniffer:
+    enable: true
+    parse-pure-ip: true
+    override-destination: true 
+    sniff:
+      TLS:
+        ports: [443, 8443]
+      HTTP:
+        ports: [80, 8080-8888]

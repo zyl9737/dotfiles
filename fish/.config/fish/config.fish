@@ -17,6 +17,7 @@ if status is-interactive
     alias fd="fdfind"
     alias x="tmux"
     alias t="task"
+    alias python=python3
 
     # 常用 eza 组合
     alias l="eza --icons"
@@ -49,3 +50,6 @@ end
 function dv
     ddgr --unsafe -x --np $argv | v +"syntax on | set ft = rst wrap"
 end
+
+# opencode
+fish_add_path /home/ryuzen/.opencode/bin
