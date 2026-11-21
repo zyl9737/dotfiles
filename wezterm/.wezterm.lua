@@ -10,7 +10,7 @@ config.default_domain = "WSL:Ubuntu-22.04" -- 设置默认域为 WSL 的 Ubuntu 
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	-- 如果你想要磨砂玻璃效果（Mica/Acrylic），这里通常建议用默认渲染器或 OpenGL
-	config.front_end = "WepGpu"
+	config.front_end = "WebGpu"
 end
 config.max_fps = 120
 -- 开启 Kitty 协议
